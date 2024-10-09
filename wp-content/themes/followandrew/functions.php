@@ -25,3 +25,16 @@ function follow_andrew_theme_support() {
   add_theme_support('title-tag');
 }
 add_action('after_setup_theme', 'follow_andrew_theme_support');
+
+
+// Register Menu Locations
+function follow_andrew_register_menu_locations() {
+  $locations = [
+    'primary' => "Desktop Primary Left Sidebar",
+    'footer' => "Foooter Items"
+  ];
+
+  register_nav_menus($locations);
+}
+
+add_action('init', 'follow_andrew_register_menu_locations');

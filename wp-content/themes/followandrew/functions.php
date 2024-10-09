@@ -19,3 +19,9 @@ function follow_andrew_register_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'follow_andrew_register_scripts');
+
+// Enable dynamic website title 
+function follow_andrew_theme_support() {
+  add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'follow_andrew_theme_support');

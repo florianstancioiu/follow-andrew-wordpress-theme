@@ -20,12 +20,13 @@ function follow_andrew_register_scripts() {
 
 add_action('wp_enqueue_scripts', 'follow_andrew_register_scripts');
 
-// Enable dynamic website title 
+// Theme support
 function follow_andrew_theme_support() {
+  // Enable dynamic website title 
   add_theme_support('title-tag');
+  add_theme_support('custom-logo');
 }
 add_action('after_setup_theme', 'follow_andrew_theme_support');
-
 
 // Register Menu Locations
 function follow_andrew_register_menu_locations() {
